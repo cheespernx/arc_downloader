@@ -1,0 +1,19 @@
+.switch-container {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 1em 0;
+
+  span {
+    margin-right: 1em;
+  }
+  opacity: 1;
+  transition: all ease-in-out 0.2s;
+
+  &.hidden {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+}

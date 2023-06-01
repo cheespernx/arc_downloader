@@ -1,0 +1,106 @@
+.container {
+
+  display: flex;
+
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  .input-search-container {
+    width: 100%;
+    font-family: 'Roboto';
+  
+    max-width: 750px;
+  
+    display: flex;
+  
+    justify-content: center;
+    align-items: center;
+  
+    // Mobile XS
+    @media only screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+    
+    input {
+      font-size: 14pt;
+  
+      width: 100%;
+      height: auto;
+  
+      padding: 1em;
+      
+      border-radius: 5px;
+      border: none;
+  
+      border-bottom: 2px solid rgba(92,10,199,0.35);
+  
+      background-color: rgba(12, 12, 12, 0.2) !important;
+  
+      color: #fff;
+  
+      transition: all ease-in-out 0.2s;
+  
+      &::placeholder {
+        color: #fff;
+      }
+  
+      &:focus{
+        -webkit-box-shadow: 0px 0px 57px -6px #5c0ac759;
+        -moz-box-shadow: 0px 0px 57px -6px rgba(92,10,199,0.35);
+        box-shadow: 0px 0px 57px -6px rgba(92,10,199,0.35);
+  
+        outline: none;
+      }
+    }
+  
+    button {
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+  
+      padding: 1em;
+      
+      border-radius: 5px;
+      border: none;
+  
+      background-color: rgba(92,10,199,0.35);
+  
+      cursor: pointer;
+  
+      font-size: 14pt;
+  
+      transition: all ease-in-out 0.2s;
+  
+      &:disabled {
+        cursor: not-allowed;
+        box-shadow: none !important;
+        background-color: rgba(92,10,199,0.35) !important;
+      }
+  
+      &:hover {
+        background-color: rgba(92, 10, 199, 0.7);
+  
+        -webkit-box-shadow: 0px 0px 57px -6px rgba(92,10,199,0.35);
+        -moz-box-shadow: 0px 0px 57px -6px rgba(92,10,199,0.35);
+        box-shadow: 0px 0px 57px -6px rgba(92,10,199,0.35);
+      }
+  
+      // Desktop
+      @media only screen and (min-width: 768px) {
+        margin-left: 15px;
+      }
+  
+      // Mobile XS
+      @media only screen and (max-width: 767px) {
+        font-size: 12pt;
+  
+        max-width: 100%;
+  
+        margin-top: 15px;
+  
+        padding: 0.5em;
+      }
+    }
+  }
+}
